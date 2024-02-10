@@ -7,7 +7,7 @@ const loginRoutes = require("./routes/loginRoutes.js");
 const productoRoutes = require("./routes/productoRoutes.js");
 const proveedorRoutes = require("./routes/proveedorRoutes.js");
 const saleRoutes = require("./routes/ventaRoutes.js");
-const reporteRoutes = require("./routes/reportesRoutes.js");
+
 require("./db.js");
 
 const server = express();
@@ -34,7 +34,6 @@ server.use("/products", productoRoutes);
 server.use("/providers", proveedorRoutes);
 server.use("/sales", saleRoutes);
 server.use("/auth", loginRoutes);
-server.use(reporteRoutes);
 
 // Error catching endware.
 server.use((err, req, res, next) => {

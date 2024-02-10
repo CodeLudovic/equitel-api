@@ -27,6 +27,8 @@
     "pg": "^8.11.3",
     "pg-hstore": "^2.3.4",
     "phantomjs-prebuilt": "^2.1.16",
+    "puppeteer": "^22.0.0",
+    "puppeteer-html-pdf": "^3.0.3",
     "resend": "^2.0.0",
     "sequelize": "^6.33.0"
   },
