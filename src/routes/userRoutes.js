@@ -1,10 +1,7 @@
 const { Router } = require("express");
 const { postHandlerUser } = require("../handlers/User/postHandlerUser");
 const { putHandlerUser } = require("../handlers/User/putHandlerUser");
-const {
-	getHandlerUser,
-	getHandlerOneUser,
-} = require("../handlers/User/getHandlerUser");
+const { getHandlerUser } = require("../handlers/User/getHandlerUser");
 const { deleteHandlerUser } = require("../handlers/User/deleteHandlerUser");
 
 const userRoutes = Router();

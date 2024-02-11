@@ -30,12 +30,12 @@ AuditLogModel(sequelize);
 const { User, Producto, Sale, Proveedor, AuditLog } = sequelize.models;
 
 // Definir relaciones entre los modelos
-Producto.belongsTo(Proveedor); // Un producto pertenece a un proveedor
-Sale.belongsTo(User); // Una venta es realizada por un usuario
+Producto.belongsTo(Proveedor);
+Sale.belongsTo(User);
 Sale.belongsToMany(Producto, {
-	through: "VentaProducto", // Utiliza el modelo VentaProducto como tabla intermedia
+	through: "VentaProducto",
 });
-AuditLog.belongsTo(User); // El registro de auditoría está asociado a un usuario
+AuditLog.belongsTo(User);
 
 // Exportar los modelos y la conexión
 module.exports = {
