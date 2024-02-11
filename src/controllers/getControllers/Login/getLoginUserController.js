@@ -26,7 +26,10 @@ const getLoginUserController = async (email, password) => {
 		};
 
 		if (user) {
-			postLog("Inicio de sesion", dataUser);
+			postLog(
+				`Inicio de sesion - Usuario: ${user.dataValues.nombre}`,
+				dataUser
+			);
 			return {
 				success: true,
 				message: "Inicio de sesion satisfactorio",
