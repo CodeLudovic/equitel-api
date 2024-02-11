@@ -1,18 +1,25 @@
 const { AuditLog } = require("../../../db");
 
-const getAuditoriasController = async () => {
+const getAuditoriasController = async (page, pagesize) => {
+	const offset = Number(page) * Number(pagesize);
 	try {
-		const { count, rows } = await AuditLog.findAndCountAll();
-		if (count > 0) {
+		if (page && pagesize && pagesize > 0) {
+			const { count, rows } = await AuditLog.findAndCountAll({
+				offset: +offset,
+				limit: +pagesize,
+			});
+
+			return {
+				count: count,
+				pagina: page,
+				auditlogs: rows,
+			};
+		} else {
+			const { count, rows } = await AuditLog.findAndCountAll();
 			return {
 				count: count,
 				auditlogs: rows,
 				status: 1,
-			};
-		} else {
-			return {
-				message: "No existen auditorias registradas",
-				status: 0,
 			};
 		}
 	} catch (error) {
