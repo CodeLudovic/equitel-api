@@ -15,7 +15,6 @@
   "dependencies": {
     "axios": "^1.5.1",
     "body-parser": "^1.19.0",
-    "circular-json": "^0.5.9",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^8.6.0",
@@ -25,8 +24,6 @@
     "morgan": "^1.10.0",
     "pg": "^8.11.3",
     "pg-hstore": "^2.3.4",
-    "puppeteer": "^22.0.0",
-    "puppeteer-html-pdf": "^3.0.3",
     "resend": "^2.0.0",
     "sequelize": "^6.33.0"
   },
