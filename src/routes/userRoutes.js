@@ -5,8 +5,8 @@ const { getHandlerUser } = require("../handlers/User/getHandlerUser");
 const { deleteHandlerUser } = require("../handlers/User/deleteHandlerUser");
 
 const userRoutes = Router();
-userRoutes.get("users/", getHandlerUser);
-userRoutes.post("user/create", postHandlerUser);
+userRoutes.get("/", getHandlerUser);
+userRoutes.post("/create", postHandlerUser);
 userRoutes.put("/user/edit", putHandlerUser);
 userRoutes.delete("/user/delete", deleteHandlerUser);
 
